@@ -5,7 +5,7 @@ let idFromComponents = NSLocale.localeIdentifier(fromComponents: [NSLocale.Key.c
 let canonical = NSLocale.canonicalLocaleIdentifier(from: idFromComponents)
 let nslocale = NSLocale(localeIdentifier: canonical)// "nb_NO")
 //let locale = Locale(identifier: "ru")// "nb_NO")
-//let symbol = nslocale.currencySymbol
+let symbol = nslocale.currencySymbol
 
 // ["en", "en-US", "uk-US", "sv-US", "nb-US", "nb", "uk", "ru"]
 let preferredLanguages: [String] = Locale.preferredLanguages.map{
@@ -35,8 +35,8 @@ print(locale.regionCode!)
 
 //print(NumberFormatter.localizedString(from: 1, number: .currencyPlural))
 
-print(locale.localizedString(forRegionCode: "UA"))
-print(locale.localizedString(forCurrencyCode: "USD"))
+print(locale.localizedString(forRegionCode: "UA")!)
+print(locale.localizedString(forCurrencyCode: "USD")!)
 //print(locale.localizedString(forCurrencyCode: "NOK"))
 
 let fmtr = NumberFormatter()
@@ -45,9 +45,11 @@ fmtr.numberStyle = .currency //.currency
 fmtr.currencyCode = code
 fmtr.currencySymbol = symbol
 
+let scale = fmtr.maximumFractionDigits
+print(scale)
+
 fmtr.string(from: 2)
 
-let scale = fmtr.maximumFractionDigits
 print(fmtr.internationalCurrencySymbol)
 print(fmtr.currencySymbol)
 

@@ -1,8 +1,11 @@
 
-import MinimalBase
+
+typealias CurrencyT = StrEnumT & CurrencyP & HasAllFormsT
 
 /// based on https://www.worlddata.info/currencies/
-public enum Currency: String, StrEnumT, CurrencyP {
+public enum Currency: Str, CurrencyT {
+    /// see https://docs.google.com/spreadsheets/d/1R9RfPnOhz5j3n8olDhxGOFczeFerl5lsLbY1MLRa2Y8/edit#gid=0
+    
     
     /// UAE Dirham
     /// 1 AED = 100 Fils
@@ -14,7 +17,7 @@ public enum Currency: String, StrEnumT, CurrencyP {
     /// Afghanistan
     case AFN
 
-    /// Lek
+    /// (Albanian) Lek, L
     /// 1 ALL = 100 Qindarka
     /// Albania
     case ALL
@@ -151,6 +154,7 @@ public enum Currency: String, StrEnumT, CurrencyP {
     /// Republic of the Congo, Democratic Republic of the Congo
     case CDF
     
+
     
     /// Swiss Franc
     /// 1 CHF = 100 Rappen
@@ -242,7 +246,7 @@ public enum Currency: String, StrEnumT, CurrencyP {
     case ETB
     
     
-    /// Euro
+    /// Euro, €
     /// 1 EUR = 100 Cent
     /// Netherlands, Andorra, Belgium, Spain, Guadeloupe, Ireland, Italy, Austria, Greece, Cyprus, Latvia, Lithuania, Luxembourg, Malta, Martinique, Mayotte, Monaco, Portugal, France, French Guiana, Reunion, Saint Pierre and Miquelon, Germany, San Marino, Slovakia, Slovenia, Finland, Holy See (Vatican City), Estonia, French Southern and Antarctic Lands, Montenegro, Saint Barthelemy, Kosovo, Åland Islands, Saint Martin
     case EUR
@@ -520,9 +524,9 @@ public enum Currency: String, StrEnumT, CurrencyP {
     case MKD
     
     
-    /// Kyat
+    /// (Burmese) kyat, Ks
     /// 1 MMK = 100 Pyas
-    /// Burma
+    /// Burma, Myanmar
     case MMK
     
     
@@ -677,8 +681,9 @@ public enum Currency: String, StrEnumT, CurrencyP {
     case RSD
     
     
-    /// Russian Rubel
-    /// 1 RUB = 100 Kopeken
+    
+    /// Russian ruble/Rubel, ₽
+    /// 1 RUB = 100 Kopeks / Kopeken
     /// Russia
     case RUB
     
@@ -827,8 +832,8 @@ public enum Currency: String, StrEnumT, CurrencyP {
     /// 1 TZS = 100 Cents
     /// Tanzania
     case TZS
-    
-    
+
+           
     /// Hrywnja
     /// 1 UAH = 100 Kopeken
     /// Ukraine
@@ -841,7 +846,7 @@ public enum Currency: String, StrEnumT, CurrencyP {
     case UGX
     
     
-    /// US Dollar
+    /// US Dollar, $
     /// 1 USD = 100 Cents
     /// American Samoa, British Virgin Islands, Ecuador, El Salvador, Guam, East Timor, Marshall Islands, Federated States of Micronesia, Palau, Northern Mariana Islands, Puerto Rico, Turks and Caicos Islands, United States, Virgin Islands, British Indian Ocean Territory, Bonaire, Saint Eustatius and Saba
     case USD
@@ -884,7 +889,7 @@ public enum Currency: String, StrEnumT, CurrencyP {
     
     /// Central African Franc
     /// minor unit: absent
-    /// Gabon, Cameroon, Central African Republic, Equatorial Guinea, Chad
+    /// Republic of the Congo, Gabon, Cameroon, Central African Republic, Equatorial Guinea, Chad
     case XAF
     
     /// East Caribbean Dollar
@@ -923,5 +928,10 @@ public enum Currency: String, StrEnumT, CurrencyP {
     /// 1 ZWL = 100 Cents
     /// Zimbabwe
     case ZWL
+    
+    /// Abkhazian apsar
+    /// 1 apsar = 100 apsarks
+    /// Abkhazia
+    case ABK
 }
 

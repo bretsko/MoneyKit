@@ -117,11 +117,11 @@ Lastly, a locale identifier can be modified, say for example to set the currency
 
 In total, `NSLocale` has support for ~ 730 distinct locales. Typically when creating a specific `NSLocale` it is done with the locale identifier. The `NSLocale` is like a dictionary with an `objectForKey` method which returns `AnyObject!`.
 
-### Formatting for specific Locale
+### Formatting for specific LocaleID
 
-I think `NSLocale` is an amazing class, but it’s very easy to make mistakes, and not that easy to construct. Therefore, to support arbitrary locales, but remove the need for framework consumers to construct locale identifiers, a new `Locale` type is provided. This is an enum which means that it is type safe, and indexable for code completion in Xcode. Its cases are all the languages which `NSLocale` supports. For those languages which are spoken in more than one country, there is an associated value of country names of only those counties.
+I think `NSLocale` is an amazing class, but it’s very easy to make mistakes, and not that easy to construct. Therefore, to support arbitrary locales, but remove the need for framework consumers to construct locale identifiers, a new `LocaleID` type is provided. This is an enum which means that it is type safe, and indexable for code completion in Xcode. Its cases are all the languages which `NSLocale` supports. For those languages which are spoken in more than one country, there is an associated value of country names of only those counties.
 
-To format money for a specific locale we can use the `Locale` enum. The following code uses `Locale.Chinese(.China)` to represent the `"zh_CN"` locale.
+To format money for a specific locale we can use the `LocaleID` enum. The following code uses `LocaleID.Chinese(.China)` to represent the `"zh_CN"` locale.
 
 ```swift
 let money: Money = 99.99

@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Base",
+        "repositoryURL": "https://github.com/bretsko/Base",
+        "state": {
+          "branch": null,
+          "revision": "52d8599a0757c5be2fa8a560dd148ffc95a70c80",
+          "version": "1.0.0"
+        }
+      },
+      {
         "package": "CwlCatchException",
         "repositoryURL": "https://github.com/mattgallagher/CwlCatchException.git",
         "state": {
@@ -20,11 +29,11 @@
         }
       },
       {
-        "package": "MinimalBase",
-        "repositoryURL": "https://github.com/bretsko/MinimalBase",
+        "package": "LocalBase",
+        "repositoryURL": "https://github.com/bretsko/LocalBase",
         "state": {
           "branch": null,
-          "revision": "8005e6a155b1b8cdd62806c7e2cf5e2fb71ad1f2",
+          "revision": "dd197700b56317e4c8f09cc966ddf5696c33ff50",
           "version": "1.0.0"
         }
       },

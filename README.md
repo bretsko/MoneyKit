@@ -1,6 +1,6 @@
 # MoneyKit
 
-Money, currency models, supporting translation to different languages
+Money, currency models, supporting translation to different languages. See details in wiki. 
 
 [![Swift5 compatible][Swift5Badge]][Swift5Link]
 [![SPM compatible][SPMBadge]][SPMLink]
